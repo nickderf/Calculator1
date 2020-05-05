@@ -1,0 +1,33 @@
+// $Id: assignment2.mpc 378 2010-02-07 22:09:38Z hillj $
+
+project (calculator) {
+  exename = calculator
+  install = .
+ 
+  specific (make, gnuace) {
+    compile_flags += -std=c++11
+  }
+
+  Source_Files {
+    driver.cpp
+	Empty_Exception.cpp
+	Add_Command.cpp
+	Sub_Command.cpp
+	Mult_Command.cpp
+	Div_Command.cpp
+	Expr_Command_Factory.cpp
+	Expr_Iterator.cpp
+	Mod_Command.cpp
+	Num_Command.cpp
+	Stack_Command_Factory.cpp
+	variable.cpp
+	Calc.cpp
+	
+  }
+
+  Template_Files {
+    Stack.cpp
+	Array.cpp
+	BaseArray.cpp
+  }
+}
